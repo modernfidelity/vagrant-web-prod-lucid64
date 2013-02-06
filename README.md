@@ -11,5 +11,5 @@ Available boxes are :
 
  - Database { percona (mysql variant) }
 
-These are based on Ubuntu Lucid 64 Bit => http://files.vagrantup.com/lucid64.box
+These are based on Ubuntu Lucid 32 Bit => http://files.vagrantup.com/lucid32.box
 
