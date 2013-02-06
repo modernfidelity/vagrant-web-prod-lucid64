@@ -1,11 +1,11 @@
 vagrant-web-prod
 ================
 
-Provides a vagrant + puppet files for a stand web prod environment
+Provides VagrantFile + puppet files for a standalone web prod environment, consisting of multi VMs.
 
 Available boxes are : 
 
- - Loadbalancer { varnish, niginx}
+ - Load Balancer { varnish, niginx}
  
  - Web { php, apache}
 
