@@ -1,7 +1,15 @@
-vagrant-web-prod
+Vagrant + Puppet
 ================
 
-Provides VagrantFile + puppet files for a standalone web prod environment, consisting of multi VMs.
+Modelling Your Production Environment Locally
+---------------------------------------------
+
+This provides VagrantFile + Puppet files to build a standalone web prod environment, consisting of multi VMs.
+
+The environment consists of a Load Balancer, Multiple Webservers and a Database.
+
+###Servers (boxes)
+
 
 Available boxes are : 
 
@@ -13,3 +21,7 @@ Available boxes are :
 
 These are based on Ubuntu Lucid 32 Bit => http://files.vagrantup.com/lucid32.box
 
+###Software Links
+
+Puppet  => https://puppetlabs.com/
+Vagrant => http://www.vagrantup.com/
