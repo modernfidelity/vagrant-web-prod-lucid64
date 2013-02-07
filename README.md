@@ -1,10 +1,10 @@
 Vagrant + Puppet
 ================
 
-Modelling Your Production Environment Locally
----------------------------------------------
+Modelling Your Web Production Environment Locally
+-------------------------------------------------
 
-This provides VagrantFile + Puppet files to build a standalone web prod environment, consisting of multi VMs.
+This provides VagrantFile + Puppet files to build a standalone web production environment, consisting of multi VMs setup in a standard and common way.
 
 The environment consists of a Load Balancer, Multiple Webservers and a Database.
 
