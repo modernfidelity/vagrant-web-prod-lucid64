@@ -1,27 +1,45 @@
-Vagrant + Puppet
-================
+Vagrant Multi VM Environment (Ubuntu 10.04 LTS)
+===============================================
 
-Modelling Your Web Production Environment Locally
--------------------------------------------------
-
-This provides VagrantFile + Puppet files to build a standalone web production environment, consisting of multi VMs setup in a standard and common way.
-
-The environment consists of a Load Balancer, Multiple Webservers and a Database.
-
-###Servers (boxes)
+This code provides VagrantFile + Puppet manifest scripts, which will create a standalone web prod environment, consisting of multi VMs, within your local development environment.
 
 
-Available boxes are : 
+Instructions
+------------
 
- - Load Balancer { varnish, niginx}
- 
- - Web { php, apache}
+- Make sure you have installed the Vagrant software : http://www.vagrantup.com/
 
- - Database { percona (mysql variant) }
+ - Download links are here -> http://downloads.vagrantup.com/
+ - For Windows users; at the time of writing this worked -> http://zamboni.readthedocs.org/en/latest/topics/install-zamboni/vagrant-on-windows.html
 
-These are based on Ubuntu Lucid 32 Bit => http://files.vagrantup.com/lucid32.box
+- Clone this repo and cd into the directory. 
 
-###Software Links
+- Run the following command : 
 
-Puppet  => https://puppetlabs.com/
-Vagrant => http://www.vagrantup.com/
+
+```bash
+vagrant up
+```
+
+Machines
+--------
+
+This will then build the following vm boxes : 
+
+- <strong>Load Balancer { varnish, niginx}</strong>
+  - *33.33.33.30 (port forward 3030)*  
+- <strong>2x Web { php, apache}</strong>
+    - *33.33.33.31 (port forward 3031)*
+    - *33.33.33.32 (port forward 3032)* 
+- <strong>Database { MySQL }</strong>
+    - *33.33.33.33 (port forward 3033)*
+
+
+These VMs are based on Ubuntu Lucid 32 Bit => http://files.vagrantup.com/lucid32.box
+
+Notes
+-----
+*Please note - you might get port errors if you are running other services on those ports. 
+
+If this does occur you will need to either change your current service running on that specific port to another 
+or amend the VagrantFile config file...
