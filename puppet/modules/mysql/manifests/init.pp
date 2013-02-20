@@ -3,24 +3,17 @@
 #   This class installs mysql client software, configure password, creates a database and imports
 #   a database.sql from the shared www folder if it exists...
 #
-#
 # @TODO : 
 #
 #
-#
-
-
 
 class mysql {
 
-
   package {
-    ["mysql-client", "mysql-server", "libmysqlclient-dev"]: 
+    ["mysql-server"]: 
       ensure => installed, 
-      
   }
 
- 
   service { "mysql":
     ensure => running,
     require => Package["mysql-server"],
@@ -38,9 +31,9 @@ class mysql {
   file {'my.cnf':
     owner   => root,
     group   => root,
-    mode    => 0640,
+    mode    => 0644,
     path    =>  '/etc/mysql/my.cnf',
-    source  =>  '/vagrant/puppet/modules/mysql/templates/my.cnf',
+    source  =>  '/vagrant/puppet/files/my.cnf',
   }
 
   
@@ -70,7 +63,7 @@ class mysql {
 
   # RESOURCES RUN ORDER
 
-  SERVICE['mysql'] -> EXEC['set-mysql-password'] -> EXEC['database-create'] -> EXEC['database-import'] -> EXEC['database-perms']
+  SERVICE['mysql'] -> EXEC['set-mysql-password'] -> EXEC['database-create'] -> EXEC['database-import'] -> EXEC['database-perms']->File['my.cnf']
 
 
 
