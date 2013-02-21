@@ -3,7 +3,9 @@ Vagrant Multi VM Environment (Ubuntu 10.04 LTS)
 
 The aim of this project is to easily and consistently create a virtual development environment that mirrors a live production setup, and gives developers working in teams, identical working areas.
 
-This code provides VagrantFile + Puppet manifest scripts, which will create a standalone web prod environment, consisting of multi VMs (1x Load Balancer, 2x Web Server, 1x Database Server)
+It uses <a href="https://www.virtualbox.org/">Virtualbox</a>, <a href="http://www.vagrantup.com">Vagrant</a> and <a href="https://puppetlabs.com/">Puppet</a> to achieve this. 
+
+The following code provides VagrantFile + Puppet manifest scripts, which will create a standalone web prod environment, consisting of multi VMs (1x Load Balancer, 2x Web Server, 1x Database Server)
 
 
  - <a href="https://github.com/modernfidelity/vagrant-web-prod-precise64">Click here a complete version running Ubuntu 12.04 LTS</a>
