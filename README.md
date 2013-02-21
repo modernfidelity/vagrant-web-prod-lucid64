@@ -23,6 +23,18 @@ Instructions
 vagrant up
 ```
 
+Softwares
+---------
+
+Ubuntu 10.04 LTS
+Apache 2.2.14
+MySQL 5.1.67
+PHP 5.3.2
+Varnish 2.1
+nginx 0.7.65
+memcached 1.4.2
+
+
 Machines
 --------
 
